@@ -193,7 +193,7 @@ main {
 .attribution {
     position: absolute;
     bottom: 0;
-    padding-block: 1rem;
+    padding-block: .5rem;
     width: 100%;
     font-size: clamp(1rem, 5%, 1.5rem);
     text-align: center;
@@ -209,4 +209,33 @@ main {
 .attribution a:hover {
     color: var(--cyan);
     text-decoration: underline;
+}
+
+@media (orientation: landscape) and (height <= 500px) {
+    
+    .container {
+
+        max-width: 90%;
+        height: 80vh;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 1fr);
+        gap: .5rem;
+
+    }
+
+    .container__image {
+        grid-row: 1/4;
+    }
+
+    .container__text,
+    .container__info,
+    .container__author {
+        padding: 0 0 0 1rem;     
+    }
+    
+    .info-date { 
+
+        margin-right: 1.5rem;
+    }
+
 }
