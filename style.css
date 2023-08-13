@@ -155,12 +155,27 @@ main {
 }
 
 .info-date img {
+    border: 1px solid red;
     width: 18%;
+    animation: clock-tilt 1000ms ease-in-out infinite;
 }
 
 .info-date p {
+    border: 1px solid red;
     font-size: 1.5rem;
     color: var(--soft-blue);
+    animation: date-glow 1200ms ease-in-out infinite;
+}
+
+@keyframes date-glow {
+    0%, 100% {
+        color: var(--soft-blue);
+    }
+    
+    50% {
+        color: var(--cyan);
+        text-shadow: 0 0 5px;
+    }
 }
 
 .container__author {
@@ -214,7 +229,6 @@ main {
 @media (orientation: landscape) and (height <= 500px) {
     
     .container {
-
         max-width: 90%;
         height: 80vh;
         grid-template-columns: 50% 50%;
@@ -224,7 +238,12 @@ main {
     }
 
     .container__image {
+        max-width: 100%;
+        max-height: 100%;
         grid-row: 1/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .container__text,
