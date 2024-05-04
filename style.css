@@ -223,9 +223,10 @@ main {
 .attribution {
   position: absolute;
   bottom: 0;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   width: 100%;
-  font-size: clamp(1rem, 5%, 1.5rem);
+  /* font-size: clamp(1rem, 5%, 1.5rem); */
+  font-size: clamp(1rem, calc(1rem + 0.28vw), 2rem);
   text-align: center;
   color: var(--white);
 }
