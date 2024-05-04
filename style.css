@@ -50,9 +50,10 @@ main {
 
 .container {
   background-color: var(--card-BG);
+  height: 60rem;
   border-radius: 20px;
   display: grid;
-  grid-template-columns: 26rem;
+  grid-template-columns: min(28rem, 65vw);
   grid-auto-flow: row;
   place-items: center;
   padding: clamp(2.1rem, 5%, 2.5rem);
@@ -225,7 +226,6 @@ main {
   bottom: 0;
   padding-block: 1rem;
   width: 100%;
-  /* font-size: clamp(1rem, 5%, 1.5rem); */
   font-size: clamp(1rem, calc(1rem + 0.28vw), 2rem);
   text-align: center;
   color: var(--white);
